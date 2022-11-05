@@ -1,0 +1,18 @@
+{
+    "name": "otaodev/php-best-practice",
+    "description": "Project where I use to best of php development",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Otaodev\\PhpBestPractice\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tiago Oliveira",
+            "email": "dev.tiago.oliveira@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
