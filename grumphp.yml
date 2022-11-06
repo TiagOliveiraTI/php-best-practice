@@ -51,3 +51,7 @@ grumphp:
             testsuite: ~
             group: []
             always_execute: true
+
+        securitychecker_enlightn:
+            lockfile: ./composer.lock
+            run_always: false

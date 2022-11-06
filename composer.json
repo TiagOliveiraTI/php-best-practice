@@ -33,6 +33,7 @@
         "phpmd/phpmd": "^2.13",
         "squizlabs/php_codesniffer": "^3.7",
         "phpro/grumphp": "^1.13",
-        "phpstan/phpstan": "^1.9"
+        "phpstan/phpstan": "^1.9",
+        "enlightn/security-checker": "^1.10"
     }
 }
