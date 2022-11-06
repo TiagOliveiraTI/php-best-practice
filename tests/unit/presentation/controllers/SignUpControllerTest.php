@@ -1,7 +1,7 @@
 <?php
 
-use Otaodev\PhpBestPractice\presentation\controllers\SignUpController;
 use PHPUnit\Framework\TestCase;
+use Otaodev\PhpBestPractice\presentation\controllers\SignUpController;
 
 /**
  * @coversDefaultClass Otaodev\PhpBestPractice\presentation\controllers\SignUpController
@@ -21,6 +21,8 @@ class SignUpControllerTest extends TestCase
      */
     public function testShouldReturn400IfNoNameIsProvided()
     {
+        $this->expectError();
+        
         $body = [
             "email" => "any@email.com",
             "password" => "any_password",
@@ -30,5 +32,9 @@ class SignUpControllerTest extends TestCase
         $response = json_decode($this->sut->handle(json_encode($body)));
 
         $this->assertEquals(400, $response->statusCode);
+
+        $this->expectErrorMessage('Missing param: name');
+
+        \trigger_error('Missing param: name', \E_USER_ERROR);
     }
 }
