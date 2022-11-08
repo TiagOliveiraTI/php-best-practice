@@ -1,17 +1,14 @@
 {
-    "name": "otaodev/php-best-practice",
-    "description": "Project where I use to best of php development",
+    "name": "otaodev/controle-freelas",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Otaodev\\PhpBestPractice\\": "src/",
-            "Otaodev\\PhpBestPractice\\Presentation\\": "src/presentation",
-            "Otaodev\\PhpBestPractice\\Presentation\\Controllers\\": "src/presentation/controllers"
+            "Otaodev\\PhpBestPractices\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Unit\\Presentation\\Controllers\\": "tests/unit/presentation/controllers"
+            "Otaodev\\PhpBestPractices\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -20,13 +17,6 @@
             "email": "dev.tiago.oliveira@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "config": {
-        "allow-plugins": {
-            "infection/extension-installer": true,
-            "phpro/grumphp": true
-        }
-    },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "infection/infection": "^0.26.16",
@@ -35,5 +25,15 @@
         "phpro/grumphp": "^1.13",
         "phpstan/phpstan": "^1.9",
         "enlightn/security-checker": "^1.10"
+    },
+    "require": {
+        "psr/http-server-handler": "^1.0",
+        "slim/slim": "4.*"
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "phpro/grumphp": true
+        }
     }
 }
